@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container-p">
+      <div class="container-f">
+        <h1 class="ttl">Solicitud</h1>
+        <input class="inp-n" type="text" id="nombre" placeholder="Nombre" />
+        <input class="inp-n" type="text" id="apellidos" placeholder="Apellidos" />
+        <input class="inp-n" type="text" id="email" placeholder="Correo electronico" />
+        <select class="inp-n" name="select" id="genero" onchange="color()">
+         <option value="" selected>Genero</option>
+          <option value="masculino" >Masculino</option>
+          <option value="femenino">Femenino</option>
+        </select>
+        <div class="d-cargo">
+          <select name="select" id="cargo" class="inp-d">
+            <option value="desarrolador" selected>Desarrollador</option>
+            <option value="gerente">Gerente de proyecto</option>
+            <option value="lider">Lider administrativo</option>
+            <option value="conductor">Conductor</option>
+            <option value="otro">Otro</option>
+          </select>
+          <div id="inputCont"></div>
+        </div>
+        <button id="btn" type="submit" class="btn1" onclick="guardar()">Guardar</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+<!-- Se le solicita al aspirante la construccion de un formulario con las siguientes caracteristicas
+
+1. nombre y apellidos
+2. Aspiracion salarial
+3. Correo electronico
+4. Genero
+5. Cargo a ocupar(entre los cargos disponibles van a tener: desarrollador, gerente de proyecto, lider administrativo, conductor, 
+y otro en caso dado que se selecciona la opcion otro este debe de habilitar un nuveo campo que le permita al usuario escribir el cargo)
+al dar click en boton guardar este debe de almacenar en un objeto tipo Json dentro de un lista [{}, {}] y deberá vaciar el formulario 
+para un nuevo registro
+
+Restricciones: todo los campos deben de ser obligatorios, si el género es masculino el botón para subir la información debe de ser de color
+azul si es femenino debe ser de color rosa. -->
